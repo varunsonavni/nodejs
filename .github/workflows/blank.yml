@@ -22,3 +22,4 @@ jobs:
           pm2 restart index.js
           pwd
           ls
+          ssh -t ubuntu@44.203.176.30 "mkdir test"
