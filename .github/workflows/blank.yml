@@ -3,10 +3,10 @@
 name: CI/CD Pipeline for NodeJS
 
 on: 
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
 
   workflow_dispatch:
 
