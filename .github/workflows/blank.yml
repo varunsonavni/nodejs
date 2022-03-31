@@ -27,10 +27,10 @@ jobs:
           if [ -d "nodejs" ]
           then
                   cd nodejs
-                  git pull https://github.com/varunsonavni/nodejs.git main
+                  git pull https://github.com/varunsonavni/nodejs.git 
                   
           else
-                  git clone https://github.com/varunsonavni/nodejs.git main
+                  git clone https://github.com/varunsonavni/nodejs.git 
                   cd nodejs
                   
           fi
