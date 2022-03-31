@@ -34,4 +34,6 @@ jobs:
                   cd nodejs
                   
           fi
+          pwd
+          ls
           EOF
