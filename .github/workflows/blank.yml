@@ -1,13 +1,10 @@
 # This is a basic workflow to help you get started whhith Actionsgeesd
 
-name: CI
+name: CI/CD Pipeline for NodeJS
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
-
 
   workflow_dispatch:
 
