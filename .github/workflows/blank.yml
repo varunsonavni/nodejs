@@ -20,7 +20,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          pm2 restart index.js
           pwd
           ls
           ssh -t ubuntu@44.203.176.30 <<-EOF
@@ -36,4 +35,5 @@ jobs:
           fi
           pwd
           ls
+          pm2 restart index.js
           EOF
