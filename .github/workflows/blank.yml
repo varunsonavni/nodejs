@@ -23,4 +23,15 @@ jobs:
           pm2 restart index.js
           pwd
           ls
-          ssh -t ubuntu@44.203.176.30 "rsync -zhvr -e . ubuntu@44.203.176.30:/home/ubuntu/test/"
+          ssh -t ubuntu@44.203.176.30 <<.EOF
+          if [ -d "nodejs" ]
+          then
+                  cd nodejs
+                  git pull https://github.com/varunsonavni/nodejs.git main
+                  
+          else
+                  git clone https://github.com/varunsonavni/nodejs.git main
+                  cd nodejs
+                  
+          fi
+          EOF
