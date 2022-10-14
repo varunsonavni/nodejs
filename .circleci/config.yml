@@ -1,15 +1,20 @@
-version: 2.1
+version: '2.1'
+orbs:
+  node: circleci/node@5.0.3
 
 jobs:
-  build:
-    working_directory: ~/circleci-python
+  install-node-example:
     docker:
-      - image: "circleci/python:3.6.4"
+      - image: 'cimg/base:stable'
     steps:
       - checkout
-      - run: python3 --version
+      - node/install:
+          install-yarn: true
+          node-version: '16.13'
+      - run: node --version
+      - run: npm --version
 
 workflows:
-  build_and_test:
+  test_my_app:
     jobs:
-      - build
+      - install-node-example
