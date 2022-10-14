@@ -19,7 +19,7 @@ workflows:
       jobs:
         - aws-ecr/build-and-push-image:
             repo: new 
-            tag: latest,v0.1.${CIRCLE_BUILD_NUM} 
+            tag: latest,v0.${CIRCLE_BUILD_NUM} 
             path: .
 
 
