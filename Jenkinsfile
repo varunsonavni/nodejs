@@ -3,13 +3,6 @@ pipeline {
 agent any
 
 stages{
-
-        node {
-        stage('JIRA') {
-        def attachment = jiraUploadAttachment idOrKey: 'MAN-1', file: 'server.js'
-        echo attachment.data.toString()
-  }
-}
     // Create Container and push to Container registry
     stage('Docker Build and Push to dev ecr') {
         when {
@@ -19,6 +12,8 @@ stages{
         
         steps {
             echo "Building phase started"
+            sh 'ls -al'
+            sh 'pwd'
         
             
         }
